@@ -1,6 +1,8 @@
 body {
   font-family: 'Open Sans Condensed';
-  padding: 20px 60px;
+	padding: 20px 60px;
+	min-height: 100vh;
+	background-image: linear-gradient(to top, #d3e9ff 20%, rgb(255, 255, 255) 80%);
 }
 
 a {
@@ -10,4 +12,16 @@ a {
 
 * {
 	box-sizing: border-box;
+	transition: all 0.4s ease;
+}
+
+@media screen and (max-width: 650px) {
+	body {
+		padding: 20px;
+	}
+}
+@media screen and (max-width: 600px) {
+	body {
+		padding: 4px 10px;
+	}
 }
