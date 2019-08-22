@@ -1,22 +1,37 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
+import axios from 'axios';
+import LogoSmall from '../../assets/Shop12.png';
 
 const StripeCheckoutButton = ({ price }) => {
 	const priceForStripe = price * 100;
 	const publishableKey = 'pk_test_xWIiykzW4vcgunyimjiei3gC00q2T1Vlwj';
 
 	const onToken = token => {
-		console.log(token);
-		alert('Payment Successful');
-	}
+		axios({
+			url: 'payment',
+			method: 'post',
+			data: {
+				amount: priceForStripe,
+				token
+			}
+		}).then(response => {
+			alert('Payment successful')
+		}).catch(error => {
+			console.log('Payment error: ', JSON.parse(error));
+			alert(
+				'There was an issue with your payment. Please make sure you use the provided credit card.'
+			)
+		})
+	};
 
 	return (
 		<StripeCheckout
 			label='Pay Now'
-			name='CRWN Clothing Ltd.'
+			name='Shop Tunnel Inc.'
 			billingAddress
 			ShippingAddress
-			image='https://svgshare.com/i/CUz.svg'
+			image={LogoSmall}
 			description={`Your total is $${price}`}
 			amount = {priceForStripe}
 			panelLabel='Pay Now'
