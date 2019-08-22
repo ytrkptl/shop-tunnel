@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Logo2 from '../../assets/Shop10.png';
-import Logo3 from '../../assets/alpha-mask.png';
 import { Link } from 'react-router-dom';
 
 export const HeaderContainer = styled.div`
