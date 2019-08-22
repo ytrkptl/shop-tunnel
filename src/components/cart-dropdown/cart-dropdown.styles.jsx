@@ -10,9 +10,20 @@ export const CartDropdownContainer = styled.div`
   padding: 20px;
   border: 1px solid black;
   background-color: white;
-  top: 90px;
-  right: 40px;
+  right: 0px;
   z-index: 5;
+  margin-top: 58px;
+  margin-right: 58px;
+
+  @media screen and (max-width: 650px) {
+    margin-right: 20px;
+  }
+  @media screen and (max-width: 600px) {
+    margin-right: 38px;
+  }
+  @media screen and (max-width: 350px) {
+    margin-right: 18px;
+  }
 `;
 
 export const CartDropdownButton = styled(CustomButton)`

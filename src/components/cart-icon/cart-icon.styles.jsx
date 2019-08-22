@@ -10,6 +10,11 @@ export const CartContainer = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  &:hover {
+		background-color: rgba(255, 255, 255, 0.7);
+		border: 1px solid black;
+	}	
 `;
 
 export const ShoppingIcon = styled(ShoppingIconSVG)`

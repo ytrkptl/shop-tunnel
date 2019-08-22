@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Logo2 from '../../assets/Shop10.png';
+import Logo3 from '../../assets/alpha-mask.png';
 import { Link } from 'react-router-dom';
 
 export const HeaderContainer = styled.div`
@@ -71,9 +72,13 @@ export const OptionLink = styled(Link)`
 	padding: 10px 15px;
 	cursor: pointer;
 	white-space: none;
-	text-decoration: underline;
 	text-align: center;
 	
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.7);
+		border: 1px solid black;
+	}	
+
 	@media screen and (max-width: 410px) {
 		font-size: 14px;
 		padding: 0px 4px;
