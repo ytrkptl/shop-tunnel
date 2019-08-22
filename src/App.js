@@ -11,6 +11,7 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import CheckoutPage from './pages/checkout/checkout.component';
 
 import Header from './components/header/header.component';
+import Footer from './components/footer/footer.component';
 
 import { selectCurrentUser} from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
@@ -36,6 +37,7 @@ const App = ({ checkUserSession, currentUser }) => {
           } 
         />
       </Switch>
+      <Footer />
     </div>
   );
 }

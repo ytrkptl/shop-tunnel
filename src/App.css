@@ -2,9 +2,9 @@ body {
   font-family: 'Open Sans Condensed';
 	padding: 20px 60px;
 	min-height: 100vh;
-	background-image: linear-gradient(to top, #d3e9ff 20%, rgb(255, 255, 255) 80%);
-	background-color: #fec84e;
-background-image: linear-gradient(315deg, #ffe097 0%, #ffdea8 74%);
+	/* background-image: linear-gradient(to top, #d3e9ff 20%, rgb(255, 255, 255) 80%); */
+	background-color: beige;
+	/* background-image: linear-gradient(315deg, #ffeab9 50%, beige 74%); */
 }
 
 a {

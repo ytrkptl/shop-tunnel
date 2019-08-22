@@ -13,9 +13,22 @@ export const TitleContainer = styled.h1`
   &:hover {
     color: grey;
   }
+
+  @media screen and (max-width: 550px) {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 `;
 
 export const PreviewContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 3fr 3fr 3fr 3fr;
+  // justify-content: space-between;
+  grid-gap: 10px;
+
+  @media screen and (max-width: 550px) {
+    grid-template-columns: 6fr 6fr;
+    grid-template-rows: 6fr 6fr;
+  }
 `;

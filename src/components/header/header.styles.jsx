@@ -3,20 +3,18 @@ import Logo2 from '../../assets/Shop10.png';
 import { Link } from 'react-router-dom';
 
 export const HeaderContainer = styled.div`
-	height: 70px;
+	height: 74px;
 	width: 100%;
 	display: inline-grid;
 	grid-template-columns: 3fr 9fr;
 	justify-items: center;
 	align-items: center;
-	margin-bottom: 25px;
+	margin-bottom: 34px;
+	border-bottom: 1px solid black;
 	
 	@media screen and (max-width: 600px) {
+		height: 70px;
 		grid-template-columns: 2fr 10fr;
-		margin-bottom: 0px;
-	}
-	@media screen and (max-width: 500px) {
-		margin-bottom: 0;
 	}
 `;
 export const LogoImage = styled.img.attrs({

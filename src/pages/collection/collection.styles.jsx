@@ -6,16 +6,27 @@ export const CollectionPageContainer = styled.div`
 `;
 
 export const CollectionTitle = styled.h2`
+  margin: -20px auto 30px;
   font-size: 38px;
-  margin: 0 auto 30px;
+  cursor: pointer;
+  &:hover {
+    color: grey;
+  }
+
+  @media screen and (max-width: 550px) {
+    margin-bottom: 20px;
+  }
 `;
 
 export const CollectionItemsContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  grid-template-columns: 3fr 3fr 3fr 3fr;
+  // justify-content: space-between;
   grid-gap: 10px;
-  
-  & > div {
-    margin-bottom: 30px;
+
+  @media screen and (max-width: 550px) {
+    grid-template-columns: 6fr 6fr;
+    grid-template-rows: 6fr 6fr;
   }
 `;
