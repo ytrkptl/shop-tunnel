@@ -2,6 +2,22 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
+// In the upcoming lessons, we will adding firebase to our 
+// React application. One thing to note, is that we will be 
+// adding a config object that we get from firebase into our 
+// files, and in that config object is an API key. Typically 
+// it is good practice not to expose your API key publicly, 
+// but in the case of firebase, we have to do so because 
+// this is how firebase knows the application is ours! This 
+// is perfectly safe, and the intended purpose of this public 
+// API key. If you commit your code to Github, you may get a 
+// warning from GitGuardian having caught a google key, but 
+// GitGuardian has acknowledged that this is not an issue here!
+
+// How we do secure out data is actually done with security rules
+//  in the firebase dashboard, but we will cover that in a later 
+//  lesson! So please continue the course without worry :)
+
 // const config = {
 // 	apiKey: "AIzaSyBSYlff3UCP2gAJLL_AAwdU2aTVVmUCLfc",
 // 	authDomain: "crwn-db-f8b87.firebaseapp.com",
@@ -11,8 +27,9 @@ import 'firebase/auth';
 // 	messagingSenderId: "838632403416",
 // 	appId: "1:838632403416:web:e1be8013d37cf990"
 // };
+
 const config = {
-	apiKey: process.env.API_KEY,
+	apiKey: "AIzaSyBSYlff3UCP2gAJLL_AAwdU2aTVVmUCLfc",
 	authDomain: process.env.AUTH_DOMAIN,
 	databaseURL: process.env.DATABASE_URL,
 	projectId: process.env.PROJECT_ID,
