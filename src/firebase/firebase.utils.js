@@ -18,24 +18,14 @@ import 'firebase/auth';
 //  in the firebase dashboard, but we will cover that in a later 
 //  lesson! So please continue the course without worry :)
 
-// const config = {
-// 	apiKey: "AIzaSyBSYlff3UCP2gAJLL_AAwdU2aTVVmUCLfc",
-// 	authDomain: "crwn-db-f8b87.firebaseapp.com",
-// 	databaseURL: "https://crwn-db-f8b87.firebaseio.com",
-// 	projectId: "crwn-db-f8b87",
-// 	storageBucket: "crwn-db-f8b87.appspot.com",
-// 	messagingSenderId: "838632403416",
-// 	appId: "1:838632403416:web:e1be8013d37cf990"
-// };
-
 const config = {
 	apiKey: "AIzaSyBSYlff3UCP2gAJLL_AAwdU2aTVVmUCLfc",
-	authDomain: process.env.AUTH_DOMAIN,
-	databaseURL: process.env.DATABASE_URL,
-	projectId: process.env.PROJECT_ID,
-	storageBucket: process.env.STORAGE_BUCKET,
-	messagingSenderId: process.env.MESSAGING_SENDER_ID,
-	appId: process.env.APP_ID
+	authDomain: "crwn-db-f8b87.firebaseapp.com",
+	databaseURL: "https://crwn-db-f8b87.firebaseio.com",
+	projectId: "crwn-db-f8b87",
+	storageBucket: "crwn-db-f8b87.appspot.com",
+	messagingSenderId: "838632403416",
+	appId: "1:838632403416:web:e1be8013d37cf990"
 };
 
 firebase.initializeApp(config);
