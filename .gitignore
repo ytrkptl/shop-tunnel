@@ -2,14 +2,21 @@
 
 # dependencies
 /client/node_modules
+/client/.pnp
+/client/.pnp.js
+
 /node_modules
 /.pnp
 .pnp.js
 
+
 # testing
+/client/coverage
 /coverage
 
+
 # production
+/client/build
 /build
 
 # misc
@@ -21,6 +28,10 @@
 .env
 
 /client/debug.log
+/client/npm-debug.log*
+/client/yarn-debug.log*
+/client/yarn-error.log*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+debug.log
