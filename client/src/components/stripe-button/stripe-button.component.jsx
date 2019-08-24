@@ -24,7 +24,7 @@ const StripeCheckoutButton = ({ price }) => {
 			)
 		})
 	};
-
+	
 	return (
 		<StripeCheckout
 			label='Pay Now'
