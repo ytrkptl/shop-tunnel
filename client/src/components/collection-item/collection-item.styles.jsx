@@ -8,6 +8,7 @@ export const CollectionItemContainer = styled.div`
   height: 350px;
   align-items: center;
   position: relative;
+  
   &:hover {
     .image {
       opacity: 0.8;
@@ -17,10 +18,6 @@ export const CollectionItemContainer = styled.div`
       display: flex;
     }
   }
-
-  // @media screen and (max-width: 350px) {
-  //   height: 22vh;
-  // }
 `;
 
 export const AddButton = styled(CustomButton)`
@@ -45,8 +42,6 @@ export const BackgroundImage = styled.div`
 export const CollectionFooterContainer = styled.div`
   width: 100%;
   height: 40px;
-  // display: flex;
-  // justify-content: space-between;
   display: grid;
   grid-template-columns: 10fr 2fr;
   font-size: 18px;
@@ -59,7 +54,6 @@ export const CollectionFooterContainer = styled.div`
 `;
 
 export const NameContainer = styled.span`
-  // margin-bottom: 15px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;

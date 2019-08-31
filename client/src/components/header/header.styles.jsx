@@ -51,8 +51,6 @@ export const LogoContainer = styled(Link)`
 	}
 `;
 
-
-
 export const OptionsContainer = styled.div`
 	width: 100%;
 	height: 100%;

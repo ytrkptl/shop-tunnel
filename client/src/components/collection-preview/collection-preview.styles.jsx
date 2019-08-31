@@ -24,7 +24,6 @@ export const PreviewContainer = styled.div`
   display: grid;
   width: 100%;
   grid-template-columns: 3fr 3fr 3fr 3fr;
-  // justify-content: space-between;
   grid-gap: 10px;
 
   @media screen and (max-width: 550px) {
