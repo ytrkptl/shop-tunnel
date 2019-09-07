@@ -23,11 +23,11 @@ export const TitleContainer = styled.h1`
 export const PreviewContainer = styled.div`
   display: grid;
   width: 100%;
-  grid-template-columns: 3fr 3fr 3fr 3fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
 
   @media screen and (max-width: 550px) {
-    grid-template-columns: 6fr 6fr;
-    grid-template-rows: 6fr 6fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 `;

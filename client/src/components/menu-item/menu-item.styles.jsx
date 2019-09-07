@@ -10,20 +10,25 @@ export const MenuItemContainer = styled.div`
 	justify-content: center;
 	border: 1px solid black;
 	margin: 0 7.5px 15px;
-	overflow: hidden;
+  overflow: hidden;
+  
 	&:hover {
-		cursor: pointer;
+    cursor: pointer;
+    
 		& .background-image {
 			transform: scale(1.1);
 			transition: transform 1.8s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-		}
+    }
+    
 		& .content {
 			opacity: 0.9;
 		}
-	}
+  }
+  
 	&:first-child {
     margin-right: 7.5px;
   }
+
   &:last-child {
     margin-left: 7.5px;
   }
@@ -31,6 +36,7 @@ export const MenuItemContainer = styled.div`
   @media screen and (max-width: 600px) {
 		height: ${({ size }) => (size ? '240px' : '240px')}
   }
+
   @media screen and (max-width: 300px) {
 		width: 100%;
 	}
