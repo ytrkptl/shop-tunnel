@@ -32,14 +32,11 @@ export const FooterGrid = styled.div`
   grid-gap: 12px;
 
   @media screen and (max-width: 600px) {
-    .FooterGrid {
-      grid-template-columns: 1fr 1fr;
-    }
+    grid-template-columns: 1fr 1fr;
   }
+
   @media screen and (max-width: 350px) {
-    .FooterGrid {
-      grid-template-columns: 1fr;
-    }
+    grid-template-columns: 1fr;
   }
 `;
 
