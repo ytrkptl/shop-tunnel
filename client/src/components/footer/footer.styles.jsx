@@ -1,38 +1,62 @@
 import styled from 'styled-components';
 // import Logo2 from '../../assets/Shop10.png';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const StyledFooter = styled.footer`
-  background-color: white;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px 10px 40px;
   position: absolute;
   left: 0;
   right: 0;
-  display: grid;
-  grid-template-columns: 4fr 4fr 4fr;
-  grid-template-rows: 200px;
   margin-top: 20px;
   border-top: 1px solid saddlebrown;
-
-  @media screen and (max-width: 550px) {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-  }
 `;
 
-export const FooterColumn = styled.div`
-  padding: 10%;
-  overflow: hidden;
-
-  @media screen and (max-width: 550px) {
-    padding: 2%;
-  }
-  
-`;
-// replace with Link later
-// export const FooterLink = styled(Link)`
-export const FooterLink = styled.span`
-  cursor: pointer;
+export const FooterTitle = styled.h3`
   display: block;
-  padding-left: 10%;
-  padding-right: 10%;
+  margin-top: 0px;
+  margin-bottom: 30px;
+`;
+
+export const FooterGrid = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0px 20px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  grid-gap: 12px;
+
+  @media screen and (max-width: 600px) {
+    .FooterGrid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media screen and (max-width: 350px) {
+    .FooterGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+`;
+
+export const FooterLink = styled(Link)`
+  text-align: left;
+  display: block;
+  line-height: 1rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const FooterAuthor = styled.p`
+  font-size: 14px;
+  width: 100%;
+  border-top: 1px solid saddlebrown;
+  padding-top: 20px;
+  text-align: center;
 `;
