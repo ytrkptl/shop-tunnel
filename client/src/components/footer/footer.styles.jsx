@@ -8,11 +8,13 @@ export const StyledFooter = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px 40px 10px 40px;
+  padding: 20px 0px 10px 0px;
   position: absolute;
   left: 0;
   right: 0;
   margin-top: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
   border-top: 1px solid saddlebrown;
 `;
 
@@ -44,6 +46,8 @@ export const FooterLink = styled(Link)`
   text-align: left;
   display: block;
   line-height: 1rem;
+  padding-left: 10px;
+  padding-right: 10px;
 
   &:hover {
     text-decoration: underline;
