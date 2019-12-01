@@ -16,6 +16,11 @@ export const StyledFooter = styled.footer`
   margin-left: 60px;
   margin-right: 60px;
   border-top: 1px solid saddlebrown;
+
+  @media screen and (max-width: 650px) {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 `;
 
 export const FooterTitle = styled.h3`
