@@ -37,7 +37,7 @@ export const AddButton = styled(CustomButton)`
   width: 80%;
   opacity: 0.7;
   position: absolute;
-  top: 255px;
+  top: 64%;
   display: none;
   max-width: 100px;
   min-width: 0px;
@@ -48,7 +48,6 @@ export const AddButton = styled(CustomButton)`
     opacity: 0.9;
     min-width: unset;
     padding: 0 10px;
-    top: 64%;
   }
 `;
 
