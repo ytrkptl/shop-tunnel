@@ -20,7 +20,6 @@ const Contact = ({ isFetching, hasErrored, data, fetchContactFormStart }) => {
   const [successOrErrorMessage, setSuccessOrErrorMessage] = useState('');
   const [showSuccessOrErrorMessage, setShowSuccessOrErrorMessage] = useState(false)
   const { customerName, email, message } = userInput;
-  const formRef = useRef();
 
   useEffect(() => {
     if (isFetching) {
