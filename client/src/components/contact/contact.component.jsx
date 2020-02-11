@@ -30,7 +30,8 @@ const Contact = ({ isFetching, hasErrored, fetchedData, errorMessage, fetchConta
       setShowSpinner(false)
       if (hasErrored !== undefined && !hasErrored) {
         setUserInput({ customerName: '', email: '', message: '' })
-        setSuccessOrErrorMessage(`Your message was sent successfully! We'll get back in touch with you within 48 hours.`)
+        setSuccessOrErrorMessage(`Your message was sent successfully! If the email you provided
+        is valid, we'll get back in touch with you within 48 hours.`)
         setShowSuccessOrErrorMessage(true)
       } else if (hasErrored !== undefined) {
         setSuccessOrErrorMessage('Something went wrong. Please try sending the form again!')

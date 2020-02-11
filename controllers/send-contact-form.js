@@ -53,7 +53,6 @@ const handleSendingContactForm = (req, res) => {
 
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
-      console.log(boo)
       return res.status(400).json(`Something went wrong. Please use the following email
         address to send Shop Tunnel an email: ${process.env.USER_EMAIL}`);
     } else {
