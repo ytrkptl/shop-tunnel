@@ -4,7 +4,7 @@ const INITIAL_STATE = {
   isFetching: false,
   data: [],
   errorMessage: undefined,
-  hasErrored: false
+  hasErrored: undefined
 };
 
 const contactFormReducer = (state = INITIAL_STATE, action) => {

@@ -28,17 +28,19 @@ const Contact = ({ isFetching, hasErrored, fetchedData, errorMessage, fetchConta
       setShowSpinner(true)
     } else {
       setShowSpinner(false)
-      if (!hasErrored) {
+      if (hasErrored !== undefined && !hasErrored) {
         setUserInput({ customerName: '', email: '', message: '' })
         setSuccessOrErrorMessage(`Your message was sent successfully! We'll get back in touch with you within 48 hours.`)
         setShowSuccessOrErrorMessage(true)
-      } else {
+      } else if (hasErrored !== undefined) {
         setSuccessOrErrorMessage('Something went wrong. Please try sending the form again!')
         setShowSuccessOrErrorMessage(true)
       }
     }
     return () => {
       setShowSpinner(false)
+      setSuccessOrErrorMessage('')
+      setShowSuccessOrErrorMessage(false)
     };
   }, [isFetching, hasErrored, fetchedData])
 
