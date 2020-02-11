@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import FormInput from '../form-input/form-input.component';
@@ -60,7 +60,7 @@ const Contact = ({ isFetching, hasErrored, data, fetchContactFormStart }) => {
       <span>Fill out the form below in order to send us a message.</span>
       {showSpinner && <Spinner />}
       {showSuccessOrErrorMessage && <StyledSuccessOrErrorMessage hasErrored={hasErrored}>{successOrErrorMessage}</StyledSuccessOrErrorMessage>}
-      <form ref={formRef} onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <FormInput
           name='customerName'
           type='name'
