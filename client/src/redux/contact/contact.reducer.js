@@ -2,9 +2,9 @@ import ContactFormTypes from './contact.types';
 
 const INITIAL_STATE = {
   isFetching: false,
-  data: [],
+  data: null,
   errorMessage: undefined,
-  hasErrored: undefined
+  hasErrored: null
 };
 
 const contactFormReducer = (state = INITIAL_STATE, action) => {
@@ -18,7 +18,7 @@ const contactFormReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         data: action.payload,
-        isFetching: false
+        isFetching: false,
       }
     case ContactFormTypes.SEND_CONTACT_FORM_FAILURE:
       return {
