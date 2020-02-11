@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const enforce = require('express-sslify');
 const compression = require('compression');
+const sendContactForm = require('./controllers/send-contact-form.js');
 
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
@@ -50,4 +51,8 @@ app.post('/payment', (req, res) => {
       res.status(200).send({ success: stripeRes });
     }
   })
+})
+
+app.post('/send-contact-form', (req, res) => {
+  sendContactForm.handleSendingContactForm(req, res)
 })
