@@ -49,11 +49,16 @@ export const FormTextarea = styled.textarea`
   border-radius: 0;
   border-bottom: 1px solid ${subColor};
   margin: 25px 0;
+  outline-color: #fac84a;
   &:focus {
     outline: none;
   }
   &:focus ~ label {
     ${shrinkLabelStyles}
+  }
+  /* the below line is needed, otherwise Firefox shows a red box-shadow */
+  &:required {
+    box-shadow: none;
   }
 `;
 

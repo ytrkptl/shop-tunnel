@@ -16,7 +16,6 @@ function* sendContactFormAsync({ payload: userInput }) {
       },
       body: JSON.stringify(userInput)
     });
-    console.log(response)
     if (response.status === 200) {
       yield put(fetchContactFormSuccess(response.json()))
     } else {
