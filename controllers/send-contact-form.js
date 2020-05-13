@@ -1,31 +1,18 @@
-'use strict';
-const nodemailer = require('nodemailer');
-
-if (process.env.NODE_ENV !== 'production') require('dotenv').config();
-
-// try using an alias instead of the acutal email address.
-// haven't tried alias yet. may not work.
-// am using MailThis.to, FormSubmit, FormSpree, etc. instead.
+"use strict";
+const sgMail = require("@sendgrid/mail");
+if (process.env.NODE_ENV !== "production") require("dotenv").config();
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const handleSendingContactForm = (req, res) => {
-
   const { customerName, email, message } = req.body;
-  let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.USER_EMAIL,
-      pass: process.env.USER_PASS
-    }
-  });
-  let mailOptions = {
-    //only using my email to send from
-    from: process.env.USER_EMAIL,
-    //only using my email to send to
+
+  const msg = {
     to: `${email}`,
+    from: `${process.env.AUTHOR_EMAIL}`,
     // Subject line
     subject: `Shop Tunnel - An ecommerce Platform`,
-    // plain text bodynpm 
-    // text: 'Hello world?', 
+    // plain text bodynpm
+    // text: 'Hello world?',
     // don't allow sending html below
     html: `
       <table style="overflow-x:auto;width:100%;max-width:600px;border:1px solid black;margin:auto">
@@ -49,19 +36,23 @@ const handleSendingContactForm = (req, res) => {
           </td>
         </tr>
       </table>
-`};
-
-  transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      return res.status(400).json(`Something went wrong. Please use the following email
-        address to send Shop Tunnel an email: ${process.env.USER_EMAIL}`);
-    } else {
-      return res.status(200).json(`Your message was sent successfully. Shop Tunnel will
-        get back in touch with you shortly. Thank you!`);
-    }
-  });
-}
+  `,
+  };
+  sgMail
+    .send(msg)
+    .then((sent) => {
+      return res.status(200)
+        .json(`Your email was sent successfully. Please check your email and 
+              enter the code provided in the email below.`);
+    })
+    .catch((err) => {
+      console.log(err);
+      return res.status(400)
+        .json(`Something went wrong. Please use the following email
+              address to contact us about this issue: ${process.env.AUTHOR_EMAIL}`);
+    });
+};
 
 module.exports = {
-  handleSendingContactForm: handleSendingContactForm
-}
+  handleSendingContactForm,
+};
