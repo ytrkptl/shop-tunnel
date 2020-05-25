@@ -18,17 +18,19 @@ export const CheckoutHeaderContainer = styled.div`
   width: 100%;
   height: 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   border-bottom: 1px solid darkgrey;
 `;
 
 export const HeaderBlockContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
   text-transform: capitalize;
-  width: 23%;
+  width: 100%;
 
-  &:last-child {
-    width: 8%;
-  }
+	@media screen and (max-width: 600px) {
+		
+	}
 `;
 
 export const TotalContainer = styled.div`

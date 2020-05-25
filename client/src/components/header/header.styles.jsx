@@ -6,7 +6,7 @@ export const HeaderContainer = styled.div`
 	height: 74px;
 	width: 100%;
 	display: inline-grid;
-	grid-template-columns: 3fr 9fr;
+	grid-template-columns: 1fr 3fr;
 	justify-items: center;
 	align-items: center;
 	margin-bottom: 34px;
@@ -14,12 +14,12 @@ export const HeaderContainer = styled.div`
 	
 	@media screen and (max-width: 600px) {
 		height: 70px;
-		grid-template-columns: 2fr 10fr;
+		grid-template-columns: 1fr 5fr;
 	}
 `;
 export const LogoImage = styled.img.attrs({
 	src: Logo2,
-	alt:""
+	alt: ""
 })`
 	height: 70px;	
 	width: auto;
@@ -59,7 +59,9 @@ export const OptionsContainer = styled.div`
 	justify-content: flex-end;
 
 	@media screen and (max-width: 600px) {
-		justify-content: space-evenly;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		justify-items: flex-end;
 	}
 `;
 
