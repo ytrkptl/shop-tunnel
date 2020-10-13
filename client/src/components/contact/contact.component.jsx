@@ -46,6 +46,7 @@ const Contact = ({ isFetching, hasErrored, data, fetchContactFormStart }) => {
   const handleSubmit = async event => {
     event.preventDefault();
     fetchContactFormStart(userInput)
+    window.scrollTo(0,0)
   };
 
   const handleChange = event => {
