@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import CustomButton from '../custom-button/custom-button.component';
+import styled from "styled-components";
+import CustomButton from "../custom-button/custom-button.component";
 
 export const CartDropdownContainer = styled.div`
   position: absolute;
@@ -12,12 +12,12 @@ export const CartDropdownContainer = styled.div`
   background-color: white;
   right: 0px;
   z-index: 5;
-  margin-top: 58px;
+  top: 58px;
   margin-right: 60px;
 
   @media screen and (max-width: 650px) {
+    top: 56px;
     margin-right: 20px;
-    margin-top: 56px;
   }
   @media screen and (max-width: 600px) {
     margin-right: 10px;
