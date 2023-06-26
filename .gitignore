@@ -26,6 +26,8 @@
 .env.test.local
 .env.production.local
 .env
+# the below file shows the env vars used in heroku. some might be unused, and some may be from heroku add-ons
+what-used-to-be-in-heroku.png
 
 /client/debug.log
 /client/npm-debug.log*
